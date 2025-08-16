@@ -217,16 +217,15 @@ export default function ModalRegister() {
                 />
                 <label className="form-check-label">Cap 🧢 (400 THB)</label>
               </div>
-            </div>
-
-            <div className="alert alert-primary mt-3" role="alert">
-              Promotion📢 Buy all items to get 20% Discount
-              {buyBottle && buyShoes && buyCap && (
-                <div className="text-success fw-bold mt-1">
-                  🎉 20% Discounted applied!
+                {/* แสดงข้อความส่วนลดถ้าเลือกครบทั้ง 3 */}
+                {buyBottle && buyShoes && buyCap && (
+                <p style={{ color: "green", marginTop: "5px" }}>
+                  (20% Discounted)
+                    </p>
+                  )}
                 </div>
-              )}
-            </div>
+
+            <div className="alert alert-primary mt-3" role="alert"> Promotion📢 Buy all items to get 20% Discount </div>
 
             {/* Total Payment */}
             <div>
